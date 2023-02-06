@@ -94,10 +94,40 @@ obtainInstruction("steak", 0)
 
 // Iteration 3 using async/await
 // ...
-// async function obtainInstructionWithSync(){
+async function makeBroccoli(){
 
+  try{
+    const response1 = await obtainInstruction("broccoli", 0);
+    document.querySelector("#broccoli").innerHTML += `<li>${response1}</li>`;
 
-// }
+    const response2 = await obtainInstruction("broccoli", 1);
+    document.querySelector("#broccoli").innerHTML += `<li>${response2}</li>`;
+
+    const response3 = await obtainInstruction("broccoli", 2);
+    document.querySelector("#broccoli").innerHTML += `<li>${response3}</li>`;
+
+    const response4 = await obtainInstruction("broccoli", 3);
+    document.querySelector("#broccoli").innerHTML += `<li>${response4}</li>`;
+
+    const response5 = await obtainInstruction("broccoli", 4);
+    document.querySelector("#broccoli").innerHTML += `<li>${response5}</li>`;
+
+    const response6 = await obtainInstruction("broccoli", 5);
+    document.querySelector("#broccoli").innerHTML += `<li>${response6}</li>`;
+
+    const response7 = await obtainInstruction("broccoli", 6);
+    document.querySelector("#broccoli").innerHTML += `<li>${response7}</li>`;
+
+    
+  }
+
+  catch (error){
+    console.log(error);
+  }
+
+}
+
+makeBroccoli();
 
 
 // Bonus 2 - Promise all
