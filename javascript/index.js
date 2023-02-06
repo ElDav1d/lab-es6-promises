@@ -55,28 +55,50 @@ getInstruction(
 
 // Iteration 2 - using promises
 
-obtainInstruction("mashedPotatoes", 0)
+obtainInstruction("steak", 0)
   .then((response) => {
-    console.log(response);
+    document.querySelector("#steak").innerHTML += `<li>${response}</li>`
     return obtainInstruction("steak", 1);
   })
   .then((response) => {
-    console.log(response);
-    return obtainInstruction("brusselsSprouts", 2);
+    document.querySelector("#steak").innerHTML += `<li>${response}</li>`
+    return obtainInstruction("steak", 2);
   })
   .then((response) => {
-    console.log(response);
-    return obtainInstruction("broccoli", 3);
+    document.querySelector("#steak").innerHTML += `<li>${response}</li>`
+    return obtainInstruction("steak", 3);
   })
   .then((response) => {
-    console.log(response);
+    document.querySelector("#steak").innerHTML += `<li>${response}</li>`
+    return obtainInstruction("steak", 4);
+  })
+  .then((response) => {
+    document.querySelector("#steak").innerHTML += `<li>${response}</li>`
+    return obtainInstruction("steak", 5);
+  })
+  .then((response) => {
+    document.querySelector("#steak").innerHTML += `<li>${response}</li>`
+    return obtainInstruction("steak", 6);
+  })
+  .then((response) => {
+    document.querySelector("#steak").innerHTML += `<li>${response}</li>`
+    return obtainInstruction("steak", 7);
+  })
+  .then((response) => {
+    document.querySelector("#steak").innerHTML += `<li>${response}</li>`
   })
   .catch((error) => {
     console.log(error);
   });
 
+
 // Iteration 3 using async/await
 // ...
+// async function obtainInstructionWithSync(){
+
+
+// }
+
 
 // Bonus 2 - Promise all
 // ...
