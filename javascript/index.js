@@ -165,7 +165,7 @@ makeBroccoli();
 // Bonus 2 - Promise all
 // ...
 
-Promise.all([
+Promise.allSettled([
   obtainInstruction("brusselsSprouts", 0),
   obtainInstruction("brusselsSprouts", 1),
   obtainInstruction("brusselsSprouts", 2),
@@ -176,7 +176,7 @@ Promise.all([
 ])
   .then((response) => {
     const itemDOM = document.querySelector("#brusselsSprouts");
-    response.forEach((value) => (itemDOM.innerHTML += `<li>${value}</li>`));
+    response.forEach((data) => (itemDOM.innerHTML += `<li>${data.value}</li>`));
   })
   .finally(() => {
     document.querySelector("#brusselsSproutsImg").removeAttribute("hidden");
