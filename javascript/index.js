@@ -1,5 +1,3 @@
-console.log("hello world");
-
 // This will print in the wrong order.
 // We added it as an example and to test that the arrays from data.js are loaded
 
@@ -56,7 +54,26 @@ getInstruction(
 // ...
 
 // Iteration 2 - using promises
-// ...
+
+obtainInstruction("mashedPotatoes", 0)
+  .then((response) => {
+    console.log(response);
+    return obtainInstruction("steak", 1);
+  })
+  .then((response) => {
+    console.log(response);
+    return obtainInstruction("brusselsSprouts", 2);
+  })
+  .then((response) => {
+    console.log(response);
+    return obtainInstruction("broccoli", 3);
+  })
+  .then((response) => {
+    console.log(response);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
 
 // Iteration 3 using async/await
 // ...
